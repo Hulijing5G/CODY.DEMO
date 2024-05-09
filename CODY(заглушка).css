@@ -1,0 +1,333 @@
+/*element.style {
+    max-width: 210px;
+    width: 210px;
+    min-width: 210px;
+    height: auto;
+    display: block;
+}
+
+.default__header {
+    left: 50%;
+    position: fixed;
+    top: 0;
+    transform: translate(-50%);
+    z-index: 100;
+}
+
+.header {
+    height: 44px;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.header__container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 1440px;
+    position: relative;
+    z-index: 1000;
+}
+
+.header_logo{
+    width: 80px;
+
+}*/
+
+body {
+    max-width: 1440;
+    width: 100%;
+    margin: auto;
+    background: black;
+    height: 100%;
+    color: antiquewhite;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    clear: both;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    color: #000000;
+    white-space: nowrap;
+}
+}
+
+.menu-item(:last-child) {
+    margin-right: 47px;
+}
+
+
+.menu-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    font-weight: bold;
+}
+
+
+
+
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility Components */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #000;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* Main Styling */
+
+/* The Floating Boxes Container */
+ul.floating-boxes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* The Boxes */
+ul.floating-boxes li {
+    position: absolute;
+    list-style: none;
+    height: 2rem;
+    width: 2rem;
+    background-image: linear-gradient(135deg,
+            rgba(255, 64, 105, 0.45),
+            hsla(263, 64%, 39%, 0.45));
+    bottom: -110rem;
+    animation: floatingbox 25s linear infinite;
+}
+
+ul.floating-boxes li:nth-child(1) {
+    left: 25%;
+    height: 6rem;
+    width: 6rem;
+    animation-delay: 1s;
+    animation-duration: 15s;
+}
+
+ul.floating-boxes li:nth-child(2) {
+    left: 10%;
+    height: 2rem;
+    width: 2rem;
+    animation-delay: 4s;
+    animation-duration: 15s;
+}
+
+ul.floating-boxes li:nth-child(3) {
+    left: 65%;
+    height: 9rem;
+    width: 9rem;
+    animation-delay: 7s;
+    animation-duration: 10s;
+}
+
+ul.floating-boxes li:nth-child(4) {
+    left: 45%;
+    height: 6rem;
+    width: 6rem;
+    animation-delay: 7s;
+    animation-duration: 20s;
+}
+
+ul.floating-boxes li:nth-child(5) {
+    left: 55%;
+    height: 4.5rem;
+    width: 4.5rem;
+    animation-delay: 10s;
+    animation-duration: 18s;
+}
+
+ul.floating-boxes li:nth-child(6) {
+    left: 35%;
+    height: 7rem;
+    width: 7rem;
+    animation-delay: 10s;
+    animation-duration: 22s;
+}
+
+ul.floating-boxes li:nth-child(7) {
+    left: 15%;
+    height: 11rem;
+    width: 11rem;
+    animation-delay: 11s;
+    animation-duration: 7s;
+}
+
+ul.floating-boxes li:nth-child(8) {
+    left: 75%;
+    height: 10rem;
+    width: 10rem;
+    animation-delay: 11s;
+    animation-duration: 9s;
+}
+
+ul.floating-boxes li:nth-child(9) {
+    left: 85%;
+    height: 5rem;
+    width: 5rem;
+    animation-delay: 12s;
+    animation-duration: 4s;
+}
+
+ul.floating-boxes li:nth-child(10) {
+    left: 95%;
+    height: 5.5rem;
+    width: 5.5rem;
+    animation-delay: 13s;
+    animation-duration: 25s;
+}
+
+@keyframes floatingbox {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-110rem) rotate(1080deg);
+        opacity: 1;
+        border-radius: 50%;
+    }
+}
+
+
+
+/*
+container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #001300;
+    overflow: hidden;
+    /*animation: animateColor 3s linear infinite;*/
+}*/
+
+/*@keyframes animateColor{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}*/
+
+.container span {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.container span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10%;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.container span:hover::before {
+    transform: scale(1);
+    transition: 0s;
+}
+
+
+.bgAnimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(38, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background: #000;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox {
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #000;
+}
+
+.colorBox:hover {
+    background: #F353A9;
+    transition-duration: 0s;
+}
+
+.backgroundAnim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #F353A9;
+    filter: blur(60px);
+    animation: animBack 5s linear infinite;
+}
+
+@keyframes animBack {
+    0% {
+        top: -60px;
+    }
+
+    100% {
+        top: 120%;
+    }
+}
